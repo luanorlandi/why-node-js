@@ -1,0 +1,28 @@
+{
+  "name": "why-node-js",
+  "version": "1.0.0",
+  "description": "Realtime chat with WebSocket to instruct Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "serve": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luanorlandi/why-node-js.git"
+  },
+  "keywords": [
+    "node",
+    "websocket",
+    "course"
+  ],
+  "author": "Luan Orlandi <orlandi.luan@gmail.com> (https://github.com/luanorlandi)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luanorlandi/why-node-js/issues"
+  },
+  "homepage": "https://github.com/luanorlandi/why-node-js#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
