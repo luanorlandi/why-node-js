@@ -5,5 +5,5 @@ const app = express();
 app.listen(port, console.log('Server up on port', port));
 
 app.get('/', function (request, response) {
-  response.send('<p>Hello World!</p>');
+  response.sendFile(__dirname + '/index.html');
 });
