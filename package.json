@@ -1,10 +1,13 @@
 {
-  "name": "why-node",
+  "name": "why-node-js",
   "version": "1.0.0",
   "description": "Realtime chat in Node",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
