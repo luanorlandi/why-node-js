@@ -92,6 +92,15 @@
         form.reset();
       }
     });
+
+    socket.on('chat message', function(message){
+      const messages = document.getElementById('messages');
+      const element = document.createElement('div');
+      const content = document.createTextNode(message);
+
+      element.appendChild(content);
+      messages.appendChild(element);
+    });
   </script>
 </body>
 </html>
