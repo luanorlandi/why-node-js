@@ -85,11 +85,13 @@
 
       form.addEventListener('submit', function(event) {
         event.preventDefault();
-        const form = document.getElementById('form');
         const input = document.getElementById('input');
+        const message = input.value;
 
-        socket.emit('chat message', input.value);
-        form.reset();
+        if (message !== '') {
+          socket.emit('chat message', message);
+          form.reset();
+        }
       });
 
       socket.on('chat message', function(message){
