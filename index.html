@@ -80,6 +80,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
   <script>
     const socket = io();
+    const form = document.getElementById('form');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const input = document.getElementById('input');
+      const message = input.value;
+
+      if (message !== '') {
+        socket.emit('chat message', message);
+        form.reset();
+      }
+    });
   </script>
 </body>
 </html>
