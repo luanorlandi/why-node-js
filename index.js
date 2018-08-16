@@ -10,3 +10,7 @@ app.get('/', function (request, response) {
 });
 
 const io = socket(server);
+
+io.on('connection', function(socket) {
+  console.log('user joined');
+});
