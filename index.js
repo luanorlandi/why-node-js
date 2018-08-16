@@ -20,8 +20,8 @@ io.on('connection', function(socket) {
     io.emit('chat message', 'user left');
   });
 
-  socket.on('chat message', function(msg) {
-    console.log('chat message: ', msg);
-    io.emit('chat message', msg);
+  socket.on('chat message', function(message) {
+    console.log('chat message: ', message);
+    io.emit('chat message', message);
   });
 });
