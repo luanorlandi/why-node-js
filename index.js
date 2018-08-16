@@ -13,6 +13,12 @@ const io = socket(server);
 
 io.on('connection', function(socket) {
   console.log('user joined');
+  io.emit('chat message', 'user joined');
+
+  socket.on('disconnect', function() {
+    console.log('user left');
+    io.emit('chat message', 'user left');
+  });
 
   socket.on('chat message', function(message) {
     console.log('chat message: ', message);
