@@ -95,8 +95,9 @@
       socket.on('chat message', function(message){
         const messages = document.getElementById('messages');
         const element = document.createElement('div');
-        const content = document.createTextNode(message);
+        const content = document.createTextNode(message.message);
 
+        element.style.backgroundColor = message.color;
         element.appendChild(content);
         messages.appendChild(element);
         messages.scrollTop = messages.scrollHeight;
