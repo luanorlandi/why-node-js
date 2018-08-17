@@ -31,11 +31,9 @@
     }
 
     #messages {
-      overflow-y: scroll;
+      height: 100%;
+      overflow-y: auto;
       overflow-wrap: break-word;
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: column;
       color: #e1e1e1;
     }
 
@@ -43,7 +41,7 @@
       padding: 10px;
       background: #252b31;
       border-radius: 3px;
-      margin: 10px 0;
+      margin-bottom: 20px;
       width: fit-content;
     }
 
@@ -101,6 +99,7 @@
 
         element.appendChild(content);
         messages.appendChild(element);
+        messages.scrollTop = messages.scrollHeight;
       });
     </script>
   </body>
